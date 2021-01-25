@@ -2,13 +2,14 @@ package main
 
 import(
 	"flag"
+	"fmt"
+	"os"
+
 	"path/filepath"
 	"io/ioutil"
 
 	"strings"
 	"strconv"
-
-	"os"
 
 	"log"
 )
@@ -18,6 +19,11 @@ func main() {
 	flag.Parse()
 	dirPath :=flag.Arg(0)
 
+	if dirPath == "" {
+		fmt.Println("Usage example:\n    $ rename directory_path")
+		os.Exit(0)
+	}
+	
 	basePath := filepath.Dir(dirPath) + "/" + filepath.Base(dirPath) + "/"
 
 	fileInfos, err := ioutil.ReadDir(dirPath)
