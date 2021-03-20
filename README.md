@@ -4,7 +4,7 @@
 
 ### Usage
 ```
-  $ go get github.com/lanius/RenameFiles_CLI/
+  $ go get github.com/lanius412/RenameFiles_CLI/
   $ cd $GOPATH/bin
   ($ mv RenameFiles_CLI rename)
   
